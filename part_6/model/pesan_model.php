@@ -44,6 +44,24 @@
             return json_encode($response);
         }
 
+        function get_pesan_array() {
+            // Membaca file JSON
+            $data = json_decode(file_get_contents($this->json_file), true);
+
+            // Filter notifikasi yang statusnya "unread"
+            $unread_notifikasi = array_filter($data, function ($notif) {
+                return $notif['status'] === 'unread';
+            });
+
+            // Format respons JSON dengan elemen "data"
+            $response = [
+                "data_ke_view" => array_values($unread_notifikasi)
+            ];
+
+            // Mengembalikan respons dalam format JSON
+            return $response;
+        }
+
         function set_pesan($parameter_data) {
             // Baca data JSON yang ada
             if (file_exists($this->json_file)) {
