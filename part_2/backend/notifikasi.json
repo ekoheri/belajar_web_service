@@ -33,11 +33,17 @@
         "id": 6,
         "nama_pengirim": "Hari",
         "isi_pesan": "Cek email untuk detail lebih lanjut.",
-        "status": "unread"
+        "status": "read"
     },
     {
         "id": 7,
         "nama_pengirim": "User Baru",
+        "isi_pesan": "Pesan baru telah ditambahkan.",
+        "status": "read"
+    },
+    {
+        "id": 8,
+        "nama_pengirim": "Budi",
         "isi_pesan": "Pesan baru telah ditambahkan.",
         "status": "unread"
     }

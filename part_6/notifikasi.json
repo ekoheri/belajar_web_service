@@ -37,20 +37,8 @@
     },
     {
         "id": 7,
-        "nama_pengirim": "Tejo",
-        "isi_pesan": "Cek WA saya boss!",
-        "status": "unread"
-    },
-    {
-        "id": 8,
-        "nama_pengirim": "Andi",
-        "isi_pesan": "Jangan lupa rapat siang ini.",
-        "status": "unread"
-    },
-    {
-        "id": 9,
-        "nama_pengirim": "Budi Susilo 1234",
-        "isi_pesan": "Ini kelas web service A & B",
+        "nama_pengirim": "Joyo",
+        "isi_pesan": "Makan sahur sudah siap!",
         "status": "unread"
     }
 ]

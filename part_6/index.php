@@ -4,6 +4,9 @@ new index;
 //Single Point of Entry
 class index {
     function __construct() {
+        require 'core/singleton.php';
+        require 'core/registry.php';
+        
         $router = new router();
         $router->route();
 

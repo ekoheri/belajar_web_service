@@ -5,5 +5,5 @@
 
     $object = new $nama_class;
     
-    call_user_func(array($object, "tampil_pesan")); 
+    call_user_func(array($object, "notifikasi")); 
 ?>
