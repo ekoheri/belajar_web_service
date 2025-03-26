@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "nama_pengirim": "Admin",
+        "isi_pesan": "Selamat datang di sistem kami!",
+        "status": "unread"
+    },
+    {
+        "id": 2,
+        "nama_pengirim": "Budi",
+        "isi_pesan": "Jangan lupa meeting besok jam 10 pagi.",
+        "status": "read"
+    },
+    {
+        "id": 3,
+        "nama_pengirim": "Siti",
+        "isi_pesan": "Tugas proyek sudah dikumpulkan.",
+        "status": "unread"
+    },
+    {
+        "id": 4,
+        "nama_pengirim": "Rina",
+        "isi_pesan": "Ada update terbaru di grup kerja.",
+        "status": "read"
+    },
+    {
+        "id": 5,
+        "nama_pengirim": "Doni",
+        "isi_pesan": "Cek email untuk detail lebih lanjut.",
+        "status": "read"
+    },
+    {
+        "id": 6,
+        "nama_pengirim": "Hari",
+        "isi_pesan": "Cek email untuk detail lebih lanjut.",
+        "status": "unread"
+    },
+    {
+        "id": 7,
+        "nama_pengirim": "Joyo",
+        "isi_pesan": "Makan sahur sudah siap!",
+        "status": "unread"
+    }
+]

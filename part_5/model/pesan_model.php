@@ -23,7 +23,7 @@
                 }
             }
 
-            return json_encode(["data" => $counter]);
+            return $counter;
         }
 
         function get_pesan() {
@@ -36,12 +36,9 @@
             });
 
             // Format respons JSON dengan elemen "data"
-            $response = [
-                "data" => array_values($unread_notifikasi)
-            ];
+            $response = array_values($unread_notifikasi);
 
-            // Mengembalikan respons dalam format JSON
-            return json_encode($response);
+            return $response;
         }
 
         function set_pesan($parameter_data) {

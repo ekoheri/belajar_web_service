@@ -1,18 +1,34 @@
 <?php
     class pesan {
         private $model;
+        private $view;
         function __construct() {
             include "model/pesan_model.php";
             $this->model = new pesan_model;
+
+            include "library/view_library.php";
+            $this->view = new view_library;
         }
         
         function notifikasi() {
-            echo $this->model->get_notifikasi();
+            $xyz = array();
+            $xyz['data'] = $this->model->get_notifikasi();
+            echo json_encode($xyz);
         }
 
+        //web service
         function tampil_pesan() {
             header('Content-Type: application/json');
-            echo $this->model->get_pesan();
+            $xzy = array();
+            $xyz['data'] = $this->model->get_pesan();
+            echo json_encode($xyz);
+        }
+
+        //monolith
+        function tampil_pesan_html() {
+            $xzy = array();
+            $xyz['data_ke_view'] = $this->model->get_pesan();
+            echo $this->view->load("view_pesan", $xyz);
         }
 
         function tambah_pesan() {

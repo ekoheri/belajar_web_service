@@ -1,8 +1,8 @@
 <?php
-    class pesan_model {
+    class pesan_repository {
         private $json_file = 'notifikasi.json';
 
-        function get_notifikasi() {
+        function getNotifikasi() {
             // Periksa apakah file JSON ada
             if (!file_exists($this->json_file)) {
                 echo 0;
@@ -26,7 +26,7 @@
             return $counter;
         }
 
-        function get_pesan() {
+        function getPesan() {
             // Membaca file JSON
             $data = json_decode(file_get_contents($this->json_file), true);
 
@@ -38,11 +38,11 @@
             // Format respons JSON dengan elemen "data"
             $response = array_values($unread_notifikasi);
 
-            // Mengembalikan respons dalam format JSON
-            return $response;
+           // Mengembalikan respons dalam format JSON
+           return $response;
         }
 
-        function set_pesan($parameter_data) {
+        function setPesan($parameter_data) {
             // Baca data JSON yang ada
             if (file_exists($this->json_file)) {
                 $jsonData = file_get_contents($this->json_file);

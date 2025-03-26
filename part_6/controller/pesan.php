@@ -7,18 +7,24 @@
         }
         
         function notifikasi() {
-            echo $this->pesan_model->get_notifikasi();
+            header('Content-Type: application/json');
+            $xzy = array();
+            $xyz['data']  = $this->pesan_model->get_notifikasi();
+            echo json_encode($xyz);
         }
 
         //web service
         function tampil_pesan() {
             header('Content-Type: application/json');
-            echo $this->pesan_model->get_pesan();
+            $xzy = array();
+            $xyz['data'] = $this->pesan_model->get_pesan();
+            echo json_encode($xyz);
         }
 
         //monolith
         function tampil_pesan_html() {
-            $xyz = $this->pesan_model->get_pesan_array();
+            $xzy = array();
+            $xyz['data_ke_view'] = $this->pesan_model->get_pesan();
             echo $this->view_library->load("view_pesan", $xyz);
         }
 
