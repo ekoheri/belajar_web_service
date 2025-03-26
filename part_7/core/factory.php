@@ -1,13 +1,8 @@
 <?php
 class Factory {
-    public static function createModel($nama_model) {
-        include_once "model/".$nama_model.".php";
-        return new $nama_model();
-    }
-
-    public static function createLibrary($nama_library) {
-        include_once "library/".$nama_library.".php";
-        return new $nama_library();
+    public static function create($path, $nama_class) {
+        include_once $path."/".$nama_class.".php";
+        return new $nama_class();
     }
 }
 ?>

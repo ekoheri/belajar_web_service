@@ -5,6 +5,7 @@ new index;
 class index {
     function __construct() {
         require 'core/factory.php';
+        require 'core/service.php';
         
         $router = new router();
         $router->route();

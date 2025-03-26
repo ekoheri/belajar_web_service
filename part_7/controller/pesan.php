@@ -4,9 +4,13 @@ class pesan {
     private $view;
 
     function __construct() {
-        $this->model = Factory::createModel("pesan_model");
-        $this->model->set_repository('pesan_repository');
-        $this->view = Factory::createLibrary("view_library");
+        $this->model = Service::singleton("model", pesan_model::class, 
+            function(){
+                return new pesan_model;
+            }
+        );
+
+        $this->view = Factory::create("library", "view_library");
     }
     
     function notifikasi() {
